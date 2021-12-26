@@ -1,0 +1,7 @@
+export default {
+  ENDPOINT: process.env.REACT_APP_ENDPOINT,
+  API_ENDPOINT: process.env.REACT_APP_ENDPOINT + '/api',
+  WS_ENDPOINT: process.env.REACT_APP_WS_ENDPOINT,
+  DISCORD_CLIENT_ID: process.env.REACT_APP_DISCORD_CLIENT_ID,
+  DISCORD_CALLBACK_URL: process.env.REACT_APP_DISCORD_CALLBACK_URL as string
+};
