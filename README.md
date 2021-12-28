@@ -38,6 +38,10 @@ In the demo bellow is demonstrated the following:
 - move users from Discord and the app
 - demonstrates realtime changes
 
+More info:
+- `Wait list` is the channel that people wait in
+- `public-toilet` and `crimminals` are the interview channels that the interview is made in
+
 ![Demo video](demo/demo.gif)
 
 ## Discord setup needed
