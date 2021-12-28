@@ -1,4 +1,4 @@
-# Discord Waitlist Queue Backend app
+# Discord Waitlist Queue Frontend App
 
 ## Info
 
@@ -6,10 +6,16 @@ For more info - refer to the base project README
 
 ## Setup
 - Config ENV variables
-    - `export BOT_TOKEN=<Discord Bot token>` Can be found under Discord app page from the [developer portal](https://discord.com/developers/applications) -> Bot -> TOKEN field
-    - `export SERVER_ID=<Discord target server id>` Easiest way to find out what's the server id: Go to the web page of the target server. Go the base page of the server - should look like this `https://discord.com/channels/<server id>` for example `https://discord.com/channels/4325423` - `4325423` is the server id
-    - `export WAIT_ROOM_ID=<Wait list Discord channel id>` As with the server id - go to the web page of the target server. Go the target channel - should look like this `https://discord.com/channels/<server id>/<channel id>` for example `https://discord.com/channels/4325423/5345376` - `5345376` is the id of the target channel
-    - `export INTERVIEW_ROOM_IDS=<channel1 id>,<channel1 id>,<and so on>` The channel ids can be obtained the same way as the wait room channel id
-    - `export TARGET_ACCESS_ROLE_ID=<target role id>` The target Discord server role id of the role that people should have in order to access the app. Type `\@<Role name>` in chat and hit enter. For example `\@Staff` to get the id of `Staff` role. The result will be `<@&<Role id>>` for example `<@&1234>` where `1234` is the role id
-    - `export JWT_SECRET=<jwt secret>` Jwt secret key - type some combination of characters
+    - `export REACT_APP_ENDPOINT=<backend base endpoint>` Example for localhost: `http://localhost:4000`
+    - `export REACT_APP_WS_ENDPOINT=ws://<backend domain>/ws` Example for localhost: `ws://localhost:4000/ws`
+    - `export REACT_APP_DISCORD_CLIENT_ID=<Discord app client id>` Client ID of the created Discord up. Can be found at app page -> General Info 
+    - `export REACT_APP_DISCORD_CALLBACK_URL=<frontend app url>` Example for localhost: `http://localhost:3000`
 - `yarn install` Install dependencies
+
+## Run app
+
+### Dev
+- `yarn start` starts the app on `http://localhost:3000`
+### Prod
+- `yarn run build:prod` build the app in `build` folder
+- Serve the content of the `build` folder. For example `http-server build/` (you probably won't use this for prod) - starts the app on `http://localhost:8080` by default.

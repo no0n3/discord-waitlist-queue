@@ -7,7 +7,6 @@ import { setUpWs } from './ws';
 import config from './config';
 import { authUser, verifyJwt } from './auth';
 
-const TARGET_PORT = 4000;
 const app = expressWs(express()).app;
 
 app.use(cors());
@@ -62,6 +61,6 @@ apiRouter.post('/move', (req, res) => {
   res.status(201).end();
 });
 
-app.listen(TARGET_PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log('App started');
 });
