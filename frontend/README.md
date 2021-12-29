@@ -1,5 +1,10 @@
 # Discord Waitlist Queue Frontend App
 
+## Env
+
+- `node v16.6.0`
+- `npm 7.19.1`
+
 ## Info
 
 For more info - refer to the base project README
